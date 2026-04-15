@@ -48,6 +48,10 @@ Model: VGG16 fine-tuned, 224x224 RGB input.
 
 1. Push changes: `git add . && git commit -m "Update" && git push`
 2. Go to repo Settings > Pages > Source: 'GitHub Actions'
-3. Live URL: https://YOUR_USERNAME.github.io/YOUR_REPO_NAME/
+3. **Live URL:** https://YOUR_USERNAME.github.io/YOUR_REPO_NAME/
+   
+   **Two options:**
+   - Source=**GitHub Actions** → root index.html (recommended)
+   - Source=**docs folder** → /docs/index.html
 
 **Note:** Static demo uses HF Space API backend. Full server in `app.py`.

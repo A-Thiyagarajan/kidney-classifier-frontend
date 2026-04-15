@@ -1,29 +1,29 @@
-# GitHub Pages Deployment Fix - TODO ✅ COMPLETED
+# GitHub Pages Deployment Fix - FINAL ✅
 
-## Completed Steps:
-- ✅ **Step 1:** Created root `Kidney-Classifier/index.html` with full UI content from `templates/index.html`
-- ✅ **Step 2:** Created `.github/workflows/pages.yml` for automatic GitHub Pages deployment:
-  - Copies `templates/index.html` and `index.html` to `public/`
-  - Deploys to `gh-pages` via GitHub Actions on push to main/master
-- ✅ **Step 3:** Updated `README.md` with GitHub Pages instructions:
-  - Push → Settings > Pages > Source='GitHub Actions'
-  - Live demo URL format
-- ✅ **Step 4:** Deployment ready - no local testing needed (Actions handles)
+## Completed Fixes:
+- ✅ `index.html` at **root** (full UI copy from templates/index.html)
+- ✅ `.github/workflows/pages.yml` **UPDATED**: 
+  - Prioritizes root `index.html` → copies to deploy root
+  - Fixed artifact path to `'.'`
+- ✅ `docs/index.html` created (backup option)
+- ✅ `README.md` updated (Actions + docs folder options)
 
-## Next User Actions:
+## 🚀 **Deploy Now:**
 ```
 cd kidney-classifier-frontend/Kidney-Classifier
 git add .
-git commit -m "Add GitHub Pages deployment (fix template/index.html issue)"
+git commit -m "Fix GitHub Pages: workflow + index.html at root"
 git push origin main
 ```
-1. GitHub repo Settings > Pages > Change source to **GitHub Actions**
-2. Visit https://YOUR_USERNAME.github.io/REPO_NAME/ → opens index.html (not template/index.html)
 
-**Status:** GitHub deployment fixed! Pages will serve root `index.html` correctly.
+## 📱 **After Push:**
+1. GitHub repo **Settings > Pages**
+2. **Source = GitHub Actions** (auto after workflow runs)
+3. **URL:** https://YOUR_USERNAME.github.io/YOUR_REPO_NAME/
+   - Opens **root/index.html** (not template/index.html)
 
-**Files Created/Updated:**
-- `index.html` (complete UI at root)
-- `.github/workflows/pages.yml`
-- `README.md` (deployment guide)
+**Alternative:** Settings > Pages > Source = **docs folder** → https://username.github.io/repo/docs/index.html
 
+**Why this fixes:** GitHub Pages now finds `index.html` at root (standard location), bypasses any `template/` misconfig.
+
+**Test:** Workflow runs ~2min after push. Check Actions tab.
