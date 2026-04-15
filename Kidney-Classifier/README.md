@@ -43,3 +43,11 @@ Response:
 
 Model: VGG16 fine-tuned, 224x224 RGB input.
 99.96% test accuracy.
+
+## GitHub Pages (Static Demo)
+
+1. Push changes: `git add . && git commit -m "Update" && git push`
+2. Go to repo Settings > Pages > Source: 'GitHub Actions'
+3. Live URL: https://YOUR_USERNAME.github.io/YOUR_REPO_NAME/
+
+**Note:** Static demo uses HF Space API backend. Full server in `app.py`.
