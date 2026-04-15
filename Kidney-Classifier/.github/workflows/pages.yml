@@ -29,17 +29,9 @@ jobs:
 
       - name: Prepare static site for GitHub Pages
         run: |
-          mkdir -p public
-          # Ensure index.html exists at root (prioritize root over templates)
-          if [ -f index.html ]; then
-            cp index.html public/index.html
-          elif [ -f templates/index.html ]; then
-            cp templates/index.html public/index.html
-          else
-            echo "No index.html found!"
-            exit 1
-          fi
-          echo "Deploying $(ls -la public/)"
+          # Deploy templates/index.html directly to root for GitHub Pages
+          cp templates/index.html index.html
+          echo "Deploying templates/index.html as root index.html"
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
