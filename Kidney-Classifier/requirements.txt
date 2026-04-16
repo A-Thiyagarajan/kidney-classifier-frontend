@@ -1,7 +1,0 @@
-tensorflow
-keras
-numpy
-Pillow
-Flask
-gunicorn
-Werkzeug
